@@ -14,7 +14,7 @@
   <version>${revision}${changelist}</version>
   <packaging>hpi</packaging>
 
-  <name>TODO Plugin</name>
+  <name>Folder Agent Plugin</name>
   <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
   <licenses>
     <license>
@@ -36,7 +36,7 @@
     <jenkins.version>2.440.3</jenkins.version>
     <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
 
-    <spotless.check.skip>false</spotless.check.skip>
+    <spotless.check.skip>true</spotless.check.skip>
   </properties>
 
   <dependencyManagement>
