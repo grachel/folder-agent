@@ -35,7 +35,9 @@ public class PatternMatchingNodeProperty extends NodeProperty<Node> {
         String jobUrl = item.getTask().getUrl().replace("job/", "");
         if (getPatterns()
                 .stream()
-                .anyMatch(pattern -> jobUrl.startsWith(pattern.getPattern()))) {
+                .map(StartsWithPattern::getPattern)
+                .filter(p -> !p.isBlank())
+                .anyMatch(jobUrl::startsWith)) {
             return null;
         }
         return new BecauseAccessIsForbidden();
