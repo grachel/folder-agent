@@ -52,6 +52,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
+            <name>GitHub grachel Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/grachel/folder-agent</url>
         </repository>
     </distributionManagement>
 </project>

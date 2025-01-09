@@ -17,13 +17,26 @@
     <pluginGroups>
         <pluginGroup>org.jenkins-ci.tools</pluginGroup>
     </pluginGroups>
+
+    <activeProfiles>
+        <activeProfile>github</activeProfile>
+    </activeProfiles>
+
     <profiles>
         <profile>
-            <id>jenkins</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            <id>github</id>
             <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2</url>
+                </repository>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/grachel/folder-agent</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
                 <repository>
                     <id>repo.jenkins-ci.org</id>
                     <url>https://repo.jenkins-ci.org/public/</url>
